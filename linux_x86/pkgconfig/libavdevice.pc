@@ -1,0 +1,14 @@
+prefix=../third_part_bin
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 55.13.102
+Requires: libavformat >= 55.48.100, libavcodec >= 55.69.100, libswresample >= 0.19.100, libavutil >= 52.92.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavdevice -lX11 -lx264 -lm -pthread -lrt
+Libs.private: 
+Cflags: -I${includedir}

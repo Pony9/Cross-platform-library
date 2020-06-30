@@ -1,0 +1,14 @@
+prefix=../third_part_bin
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavresample
+Description: Libav audio resampling library
+Version: 1.3.0
+Requires: libavutil >= 52.92.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavresample -lX11 -lx264 -lm -pthread -lrt
+Libs.private: 
+Cflags: -I${includedir}
